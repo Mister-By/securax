@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h1>Notifications ESP32</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Contenu</th>
+        <th>Date</th>
+    </tr>
+
+    <% notifications.forEach(n => { %>
+        <tr>
+            <td><%= n.id %></td>
+            <td><%= n.type %></td>
+            <td><%= n.content %></td>
+            <td><%= n.datetime %></td>
+        </tr>
+    <% }) %>
+
+</table>
+
+</body>
+</html>
