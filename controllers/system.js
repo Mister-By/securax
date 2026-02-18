@@ -83,6 +83,36 @@ class System {
       return;
     }
   }
+  motifUser(req, res)
+  {
+    const {id} = req.params;
+    const {nom, badge} = req.body;
+
+    try {
+      const users = this.SystemModel.modifUser(id, nom, badge);
+      res.json(users);
+      return;
+    } catch (e) {
+      res.json();
+      return;
+    }
+    
+  }
+
+  delUser(req, res)
+  {
+    const {id} = req.params;
+
+    try {
+      const users = this.SystemModel.delUser(id);
+      res.json(users);
+      return;
+    } catch (e) {
+      res.json();
+      return;
+    }
+    
+  }
 }
 
 module.exports = { System };

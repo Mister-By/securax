@@ -117,6 +117,25 @@ class SystemModel {
       .prepare("SELECT * FROM personnes")
       .all();
   }
+  modifUser(i,n,b)
+  {
+    this.db.prepare(`
+      UPDATE personnes set nom = ?, badge = ? where idper is ?
+    `).run(n, b, i);
+    return this.db
+      .prepare("SELECT * FROM personnes")
+      .all();
+  }
+
+  delUser(i)
+  {
+    this.db.prepare(`
+      delete from personnes where idper is ?
+    `).run(i);
+    return this.db
+      .prepare("SELECT * FROM personnes")
+      .all();
+  }
 }
 
 module.exports = { SystemModel };

@@ -45,6 +45,8 @@ app.post("/add/depart/intrus", system.addDepIntrus.bind(system));
 app.post("/add/arrive/intrus", system.addArrIntrus.bind(system));
 app.post("/add/histo", system.getHistorique.bind(system));
 app.post("/add/user", system.addUser.bind(system));
+app.post("/modif/user/:id", system.motifUser.bind(system));
+app.post("/del/user/:id", system.delUser.bind(system));
 app.get("/getAll/user", system.getAllUser.bind(system));
 
 // --- Lancement serveur ---
