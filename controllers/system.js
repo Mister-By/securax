@@ -70,6 +70,19 @@ class System {
       return;
     }
   }
+  getAllUser(req,res)
+  {
+    try {
+      
+      const users = this.SystemModel.getAllUser();
+      res.json(users);
+      return;
+    } catch (e) {
+      console.log(e);
+      res.json();
+      return;
+    }
+  }
 }
 
 module.exports = { System };

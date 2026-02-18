@@ -110,6 +110,13 @@ class SystemModel {
       .prepare("SELECT * FROM personnes")
       .all();
   }
+
+  getAllUser()
+  {
+    return this.db
+      .prepare("SELECT * FROM personnes")
+      .all();
+  }
 }
 
 module.exports = { SystemModel };
