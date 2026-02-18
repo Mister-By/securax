@@ -57,6 +57,19 @@ class System {
     const histo = this.SystemModel.addHisto();
     res.json(histo);
   }
+  addUser(req,res)
+  {
+    try {
+      const {nom, badge} = req.body;
+      const users = this.SystemModel.addUser(nom, badge);
+      res.json(users);
+      return;
+    } catch (e) {
+      console.log(e);
+      res.json();
+      return;
+    }
+  }
 }
 
 module.exports = { System };

@@ -100,6 +100,16 @@ class SystemModel {
       ORDER BY ap.heure DESC
     `).all();
   }
+  addUser(n,b)
+  {
+    this.db.prepare(`
+      INSERT INTO Personnes (nom, badge)
+      VALUES (?, ?)
+    `).run(n, b);
+    return this.db
+      .prepare("SELECT * FROM personnes")
+      .all();
+  }
 }
 
 module.exports = { SystemModel };

@@ -22,4 +22,7 @@ INSERT INTO personnes(nom, badge) values ("Instrus", null);
 
 INSERT INTO actions(type) values ("Arrive"),("Depart"), ("Instrusion1"), ("Instrusion2");
 
-
+INSERT INTO personnes(nom, badge) 
+values 
+("Niamien Yvan", "D3 D9 3F 2"),
+("Guei Enock Elisee", "81 D 11 5");

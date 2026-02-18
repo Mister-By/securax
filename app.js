@@ -44,6 +44,7 @@ app.post("/add/depart", system.addDep.bind(system));
 app.post("/add/depart/intrus", system.addDepIntrus.bind(system));
 app.post("/add/arrive/intrus", system.addArrIntrus.bind(system));
 app.post("/add/histo", system.getHistorique.bind(system));
+app.post("/add/user", system.addUser.bind(system));
 
 // --- Lancement serveur ---
 server.listen(process.env.PORT, () => {
